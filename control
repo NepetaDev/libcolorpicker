@@ -9,5 +9,5 @@ Author: Bailey Seymour
 Section: System
 Tag: role::developer
 Replaces: org.thebigboss.libcolorpicker
-Provides: org.thebigboss.libcolorpicker
+Provides: org.thebigboss.libcolorpicker (=1.6.1)
 Conflicts: org.thebigboss.libcolorpicker
