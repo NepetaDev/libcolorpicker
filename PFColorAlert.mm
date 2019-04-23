@@ -128,8 +128,8 @@ extern "C" void LCPShowTwitterFollowAlert(NSString *title, NSString *welcomeMess
 	[self.haloView removeFromSuperview];
 	[self.mainViewController.view addSubview:self.haloView];
 
-	const CGRect sliderFrame = CGRectMake((mainFrame.size.width / 2) - (((mainFrame.size.width / 3) * 2) / 2),
-			haloViewFrame.origin.y + haloViewFrame.size.height, (mainFrame.size.width / 3) * 2, 50);
+	const CGRect sliderFrame = CGRectMake((mainFrame.size.width / 2) - (((mainFrame.size.width / 2.5) * 2) / 2),
+			haloViewFrame.origin.y + haloViewFrame.size.height, (mainFrame.size.width / 2.5) * 2, 50);
 
 	self.saturationSlider = [[[PFColorLiteSlider alloc] initWithFrame:sliderFrame color:startColor style:PFSliderBackgroundStyleSaturation] autorelease];
 	[self.mainViewController.view addSubview:self.saturationSlider];
