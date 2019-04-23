@@ -143,14 +143,14 @@
 
 - (UIImage *)thumbImageWithColor:(UIColor *)color
 {
-	CGFloat size = 28.0f;
+	CGFloat size = 36.0f;
 	CGRect rect = CGRectMake(0.0f, 0.0f, size, size);
 	UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGContextSetLineWidth(context, 6);
+	CGContextSetLineWidth(context, 3.5);
 
 	// CGContextSetFillColorWithColor(context, CGColorCreate(cs, components));
-	CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 0.3);
+	CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 0.4);
 
 	CGContextAddArc(context, rect.size.width / 2, rect.size.height / 2, rect.size.width / 3, 0, 2 * M_PI, 1);
 
@@ -158,7 +158,7 @@
 
 	// CGContextScaleCTM(context, 0.8, 0.8);
 
-	CGContextAddArc(context, rect.size.width / 2, rect.size.height / 2, (rect.size.width / 3) - 3, 0, 2 * M_PI, 1);
+	CGContextAddArc(context, rect.size.width / 2, rect.size.height / 2, (rect.size.width / 3) - 1, 0, 2 * M_PI, 1);
 	CGContextSetFillColorWithColor(context, color.CGColor);
 	CGContextDrawPath(context, kCGPathEOFill);
 
