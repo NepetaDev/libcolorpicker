@@ -284,17 +284,23 @@ extern "C" void LCPShowTwitterFollowAlert(NSString *title, NSString *welcomeMess
 
 - (void)hueChanged:(float)hue
 {
+	float saturation = self.litePreviewView.mainColor.saturation;
+	if (saturation == 0) saturation = 0.000001f;
+
+	float brightness = self.litePreviewView.mainColor.brightness;
+	if (brightness == 0) brightness = 0.000001f;
+
 	[self.litePreviewView updateWithColor:
-		[UIColor colorWithHue:hue saturation:self.litePreviewView.mainColor.saturation brightness:self.litePreviewView.mainColor.brightness alpha:self.litePreviewView.mainColor.alpha]];
+		[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:self.litePreviewView.mainColor.alpha]];
 
 	[self.saturationSlider updateGraphicsWithColor:
-		[UIColor colorWithHue:hue saturation:self.litePreviewView.mainColor.saturation brightness:self.litePreviewView.mainColor.brightness alpha:self.litePreviewView.mainColor.alpha]];
+		[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:self.litePreviewView.mainColor.alpha]];
 
 	[self.brightnessSlider updateGraphicsWithColor:
-		[UIColor colorWithHue:hue saturation:self.litePreviewView.mainColor.saturation brightness:self.litePreviewView.mainColor.brightness alpha:self.litePreviewView.mainColor.alpha]];
+		[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:self.litePreviewView.mainColor.alpha]];
 
 	[self.alphaSlider updateGraphicsWithColor:
-		[UIColor colorWithHue:hue saturation:self.litePreviewView.mainColor.saturation brightness:self.litePreviewView.mainColor.brightness alpha:self.litePreviewView.mainColor.alpha]];
+		[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:self.litePreviewView.mainColor.alpha]];
 }
 
 - (void)saturationChanged:(UISlider *)_slider
