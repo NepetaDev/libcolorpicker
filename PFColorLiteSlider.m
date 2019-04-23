@@ -74,6 +74,8 @@
 	internalFrame.size.height = 10; // set to ten because we want a thin BG
 	internalFrame.origin.y = ((frame.size.height - 10) / 2);
 	self.backgroundView = [[[PFColorSliderBackgroundView alloc] initWithFrame:internalFrame color:c style:s] autorelease];
+	self.backgroundView.layer.cornerRadius = 5;
+	self.backgroundView.layer.masksToBounds = YES;
 
 	[self addSubview:self.backgroundView];
 	[self addSubview:self.slider];
