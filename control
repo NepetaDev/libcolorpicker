@@ -8,3 +8,6 @@ Maintainer: Nepeta
 Author: Bailey Seymour
 Section: System
 Tag: role::developer
+Replaces: org.thebigboss.libcolorpicker
+Provides: org.thebigboss.libcolorpicker
+Conflicts: org.thebigboss.libcolorpicker
