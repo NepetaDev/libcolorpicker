@@ -1,7 +1,7 @@
 Package: me.nepeta.libcolorpicker
 Name: libcolorpicker
-Depends: firmware (>= 11.0)
-Version: 1.6.2-1
+Depends: firmware (>= 9.0)
+Version: 1.6.2-2
 Architecture: iphoneos-arm
 Description: libcolorpicker with arm64e (A12) support
 Maintainer: Nepeta
